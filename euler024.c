@@ -17,7 +17,13 @@
 int main(void)
 {
   int permutation = 1;
-  char number[10] = "0123456789";
+  int i;
+  int number[10] = {0,1,2,3,4,5,6,7,8,9};
 
 
 }
+
+/*Find the largest index k such that a[k] < a[k + 1]. If no such index exists, the permutation is the last permutation.
+Find the largest index l greater than k such that a[k] < a[l].
+Swap the value of a[k] with that of a[l].
+Reverse the sequence from a[k + 1] up to and including the final element a[n].*/
