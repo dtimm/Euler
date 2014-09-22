@@ -42,8 +42,8 @@ int main(void)
 
   for(j = 0; j < LENGTH; j++)
   {
-		printf("%d", number[j]);
-	}
+    printf("%d", number[j]);
+  }
 
 	printf("\n");
 }
@@ -52,6 +52,7 @@ int find_k(int * word, int len)
 {
   int i;
   int k = 0;
+
   for(i = 0; i < len - 1; i++)
   {
 		if(word[i] < word[i+1]) k = i;
@@ -64,6 +65,7 @@ int find_l(int * word, int len, int k)
 {
 	int i, l;
 	l = k;
+
 	for(i = k + 1; i < len; i++)
 	{
 		if(word[i] > word[k]) l = i;
