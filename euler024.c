@@ -38,14 +38,14 @@ int main(void)
 		number[k] = number[l];
 		number[l] = temp;
 		reverse(&number[k+1], LENGTH - (k + 1));
-
-	  for(j = 0; j < LENGTH; j++)
-	  {
-			printf("%d", number[j]);
-		}
-
-		printf("\n");
 	}
+
+  for(j = 0; j < LENGTH; j++)
+  {
+		printf("%d", number[j]);
+	}
+
+	printf("\n");
 }
 
 int find_k(int * word, int len)
