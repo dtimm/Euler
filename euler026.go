@@ -23,11 +23,32 @@
 package main
 
 import "fmt"
+import "math/big"
 
 func main() {
-  d := 1;
+  current := 0
+  temp := 0
+  max := 0
 
   for i := 1; i <= 1000; i++ {
-
+    temp = repeat(i)
+    if temp < i && temp >= current {
+      current = temp
+      max = i
+    }
   }
+
+  fmt.Printf("%d\t%d\n", max, current)
+}
+
+/* Oh god the ugly. I'm so sorry. */
+func repeat(num int) int {
+  z := big.NewInt(9)
+  d := big.NewInt(int64(num))
+  k := 1
+  for ((z.Mod(z, d)).Cmp(big.NewInt(0))) > 0 && k < num {
+    z = z.Add(z.Mul(z, big.NewInt(10)), big.NewInt(9))
+    k += 1
+  }
+  return k
 }
